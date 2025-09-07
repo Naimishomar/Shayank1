@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@keyframes left-right {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-100%); } /* move left */
+  100% { transform: translateX(0); }    /* back to start */
+}
+
+@keyframes right-left {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-100%); }  /* move right */
+  100% { transform: translateX(0); }    /* back to start */
+}
+
+.animate-left-right {
+  animation: left-right 20s linear infinite;
+}
+.animate-right-left {
+  animation: right-left 20s linear infinite;
+}
+.animate-left-right:hover,
+.animate-right-left:hover {
+  transform: scale(1.02) translateZ(0);
+  animation-play-state: paused;
+}
